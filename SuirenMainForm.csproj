@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2D2FEC5-600E-4AB5-BC21-E0F1730D9D66}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SuirenMainForm</RootNamespace>
+    <AssemblyName>SuirenMainForm</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllProducts.Designer.cs">
+      <DependentUpon>AllProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChatSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChatSupport.Designer.cs">
+      <DependentUpon>ChatSupport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Day1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Day1.Designer.cs">
+      <DependentUpon>Day1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Day2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Day2.Designer.cs">
+      <DependentUpon>Day2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Day3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Day3.Designer.cs">
+      <DependentUpon>Day3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Day4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Day4.Designer.cs">
+      <DependentUpon>Day4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Day5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Day5.Designer.cs">
+      <DependentUpon>Day5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Day6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Day6.Designer.cs">
+      <DependentUpon>Day6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Day7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Day7.Designer.cs">
+      <DependentUpon>Day7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAQ.Designer.cs">
+      <DependentUpon>FAQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetStarted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetStarted.Designer.cs">
+      <DependentUpon>GetStarted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JustForYou.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JustForYou.Designer.cs">
+      <DependentUpon>JustForYou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LifestyleFactor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LifestyleFactor.Designer.cs">
+      <DependentUpon>LifestyleFactor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrame.Designer.cs">
+      <DependentUpon>MainFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyRoutine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyRoutine.Designer.cs">
+      <DependentUpon>MyRoutine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecommendedProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecommendedProducts.Designer.cs">
+      <DependentUpon>RecommendedProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reviews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reviews.Designer.cs">
+      <DependentUpon>Reviews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinAllergies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkinAllergies.Designer.cs">
+      <DependentUpon>SkinAllergies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkincareGoals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkincareGoals.Designer.cs">
+      <DependentUpon>SkincareGoals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinConcerns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkinConcerns.Designer.cs">
+      <DependentUpon>SkinConcerns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinTone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkinTone.Designer.cs">
+      <DependentUpon>SkinTone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkinType.Designer.cs">
+      <DependentUpon>SkinType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimelineProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimelineProgress.Designer.cs">
+      <DependentUpon>TimelineProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserProfile.Designer.cs">
+      <DependentUpon>UserProfile.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllProducts.resx">
+      <DependentUpon>AllProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChatSupport.resx">
+      <DependentUpon>ChatSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Day1.resx">
+      <DependentUpon>Day1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Day2.resx">
+      <DependentUpon>Day2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Day3.resx">
+      <DependentUpon>Day3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Day4.resx">
+      <DependentUpon>Day4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Day5.resx">
+      <DependentUpon>Day5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Day6.resx">
+      <DependentUpon>Day6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Day7.resx">
+      <DependentUpon>Day7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAQ.resx">
+      <DependentUpon>FAQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetStarted.resx">
+      <DependentUpon>GetStarted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JustForYou.resx">
+      <DependentUpon>JustForYou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LifestyleFactor.resx">
+      <DependentUpon>LifestyleFactor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrame.resx">
+      <DependentUpon>MainFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyRoutine.resx">
+      <DependentUpon>MyRoutine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RecommendedProducts.resx">
+      <DependentUpon>RecommendedProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reviews.resx">
+      <DependentUpon>Reviews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinAllergies.resx">
+      <DependentUpon>SkinAllergies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkincareGoals.resx">
+      <DependentUpon>SkincareGoals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinConcerns.resx">
+      <DependentUpon>SkinConcerns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinTone.resx">
+      <DependentUpon>SkinTone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinType.resx">
+      <DependentUpon>SkinType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimelineProgress.resx">
+      <DependentUpon>TimelineProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserProfile.resx">
+      <DependentUpon>UserProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bd683b84-6aa3-4ee5-9707-0acdd54e291b %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bd683b84-6aa3-4ee5-9707-0acdd54e291b %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0d333df1-8b70-47e5-b945-85f7bee26840.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0d333df1-8b70-47e5-b945-85f7bee268401.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\495073132_2225502761215393_1594262215929043361_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\495073132_2225502761215393_1594262215929043361_n1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\495073132_2225502761215393_1594262215929043361_n2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\491215764_711300911401107_1269377068879481716_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\495072494_2160193777737879_2814346733827445333_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bd683b84-6aa3-4ee5-9707-0acdd54e291b %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\491214933_4088729234722752_9103996917466489208_n %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\491223153_1712440122699207_553341862555172729_n.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

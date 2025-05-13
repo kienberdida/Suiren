@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LogIn
+namespace SuirenMainForm
 {
     public partial class Form1 : Form
     {
         public static Dictionary<string, string> userCredentials = new Dictionary<string, string>();
+        public static Dictionary<string, string> userEmails = new Dictionary<string, string>();
         public Form1()
         {
             InitializeComponent();
+            txtboxPassword.PasswordChar = '*';
+            txtboxConfirmPassword.PasswordChar = '*';
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -23,103 +20,85 @@ namespace LogIn
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void checkboxShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-
+            txtboxPassword.PasswordChar = checkboxShowPassword.Checked ? '\0' : '*';
+            txtboxConfirmPassword.PasswordChar = checkboxShowPassword.Checked ? '\0' : '*';
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void RegisterBtn_Click(object sender, EventArgs e)
+
         {
+            string username = txtboxUsername.Text.Trim();
+            string password = txtboxPassword.Text;
+            string confirmPassword = txtboxConfirmPassword.Text;
+            string email = txtboxEmail.Text.Trim();
 
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked)
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPassword))
             {
-                textBox2.PasswordChar = '\0'; // Show password
-                textBox3.PasswordChar = '\0'; // Show confirm password
+                MessageBox.Show("Please fill in all the fields.", "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
+
+            if (password != confirmPassword)
             {
-                textBox2.PasswordChar = '*'; // Mask password
-                textBox3.PasswordChar = '*'; // Mask confirm password
+                MessageBox.Show("Password and Confirm Password do not match.", "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            if (userCredentials.ContainsKey(username))
+            {
+                MessageBox.Show("Username already exists. Please choose a different one.", "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            userCredentials.Add(username, password);
+            userEmails.Add(username, email);
+            MessageBox.Show("Successfully created an account!", "Registration Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            txtboxUsername.Clear();
+            txtboxPassword.Clear();
+            txtboxConfirmPassword.Clear();
+            txtboxEmail.Clear();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            txtboxUsername.Clear();
+            txtboxPassword.Clear();
+            txtboxConfirmPassword.Clear();
+            txtboxEmail.Clear();
+        }
+
+        private void backtoLogin_Click(object sender, EventArgs e)
+        {
+            Login loginForm = new Login();
+            loginForm.Show();
+            this.Hide();
+        }
+
+        private void txtboxEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtboxUsername_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string username = textBox1.Text;
-            string password = textBox2.Text;
-            string confirmPassword = textBox3.Text;
-
-            // Check if the password and confirm password match
-            if (password != confirmPassword)
-            {
-                MessageBox.Show("Password and Confirm Password must match.");
-                return;
-            }
-
-            // Check if username and password are entered
-            if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
-            {
-                // Save credentials in the static dictionary
-                userCredentials[username] = password;
-                MessageBox.Show("Account created successfully!");
-
-                // Optionally, clear the textboxes after successful account creation
-                textBox1.Clear();
-                textBox2.Clear();
-                textBox3.Clear();
-            }
-            else
-            {
-                MessageBox.Show("Please enter both username and password.");
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            textBox1.Clear(); // Clear username
-            textBox2.Clear(); // Clear password
-            textBox3.Clear(); // Clear confirm password
+            Login loginForm = new Login();
+            loginForm.Show();
+            this.Hide();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-           
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-            LogIn2 loginForm = new LogIn2();
-            loginForm.Show();
-            this.Hide(); // Hide the current form (Form1)
+            ForgotPassword forgotPass = new ForgotPassword();
+            forgotPass.Show();
+            this.Hide();
         }
     }
 }
